@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="container-wide animate-pulse py-10" aria-label="Loading Moodly"><div className="mb-6 h-8 w-48 bg-neutral-100"/><div className="h-[400px] bg-neutral-100"/></div>;}

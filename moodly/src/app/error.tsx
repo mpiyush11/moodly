@@ -1,0 +1,2 @@
+'use client';
+export default function ErrorPage({reset}:{error:Error&{digest?:string};reset:()=>void}){return <div className="container-wide py-24 text-center"><p className="eyebrow text-neutral-500">A moment, please</p><h1 className="my-6 text-4xl font-extrabold uppercase tracking-tight">The studio is taking a breath.</h1><p className="mb-8 text-sm text-neutral-500">Something didn’t load. Please try again.</p><button className="primary-button" onClick={reset}>Try again</button></div>;}

@@ -1,0 +1,12 @@
+node_modules
+.next
+.env*
+!.env.example
+.data
+*.tsbuildinfo
+playwright-report
+test-results
+!.env.demo
+
+# Optional test evidence; required public images are unaffected.
+docs/verification/**/*.png

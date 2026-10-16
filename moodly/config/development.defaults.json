@@ -1,0 +1,14 @@
+{
+  "notice": "INTENTIONALLY SHARED TEST CREDENTIALS, authorised by the repository owner. Disposable test data only. Anyone with repository access can access this database. Rotate these credentials before production. Never add real customer data to this project.",
+  "testPoolerHost": "aws-0-ap-southeast-2.pooler.supabase.com",
+  "poolerNote": "The supplied DATABASE_URL names Mumbai, but this shared test project is hosted in Sydney. Only the known shared test credentials for this project are redirected to the verified Sydney pooler. Custom credentials and endpoints are never rewritten.",
+  "env": {
+    "MOODLY_DEMO_MODE": "false",
+    "NEXT_PUBLIC_SUPABASE_URL": "https://kegaqvhpxdwgvnmrsrxq.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlZ2FxdmhweGR3Z3ZubXJzcnhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1OTI0NjgsImV4cCI6MjEwNjE2ODQ2OH0.Yk7ItdHiC2D_7M5t37P4QqF3-ta3DFFrLX1KNV6cSOY",
+    "DATABASE_URL": "postgresql://postgres.kegaqvhpxdwgvnmrsrxq:Moodly%231lala@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true",
+    "ADMIN_PASSWORD": "Moodly#1lala",
+    "ADMIN_SECRET_KEY": "moodly_secret_jwt_2026",
+    "NEXT_PUBLIC_WHATSAPP_NUMBER": "919876543210"
+  }
+}

@@ -1,0 +1,18 @@
+# Live launch checks — catalogue + WhatsApp requests
+
+The default Codespaces configuration uses the owner-authorised shared **TEST** database. Use a private production project and credentials before collecting any real customer information. Development password login is not a production login.
+
+1. Apply both schema migrations to the intended private Supabase project. Import only the real products you intend to offer; the starter catalogue and its stock counts are test data, not the owner's actual 100 blanks.
+2. Provision the owner in Supabase Auth and add the correct `moodly_admins` membership. Verify that anonymous users and unrelated authenticated accounts cannot read Studio data or change products/settings/stock.
+3. Configure private Supabase URL/anon key and server-only database or service-role credentials. Disable explicit demo mode. Set `NEXT_PUBLIC_SITE_URL` to the real HTTPS origin; never publish server secrets in public variables or source control.
+4. Save and verify the real WhatsApp destination, optional Instagram/catalogue links, actual reply hours and dispatch note. A missing destination deliberately blocks preparing a WhatsApp draft. Do not promise instant replies, guaranteed dispatch, free shipping or unconditional exchanges unless you can provide them.
+5. Replace placeholder imagery with accurate print/product photos. Confirm the actual 240 GSM specification, finished-garment measurements, fit, colours and prices. Enter the real Black/White/Beige × S/M/L/XL/XXL distribution of the 100 blanks; do not infer the split from seed values.
+6. Upload a genuine JPG/PNG/WebP through Studio. Production must use the `product-images` Supabase Storage bucket: publicly readable product images, admin-only writes. Development workspace upload storage is not permanent production hosting.
+7. Verify public catalogue/inventory/settings RLS and authorised historic-order access. Keep historic tables/RPCs for managing existing records only; new website enquiries must not call the old order-creation RPC. The retired public endpoint must continue to return HTTP 410.
+8. On a private staging origin, set `ALLOW_LIVE_TEST_REQUEST=true` and run `npm run test:live` for the opt-in request-only check. Verify server pricing, a valid WhatsApp draft and unchanged stock. This check must not create an order, open/send WhatsApp messages or make a payment.
+9. Practise the actual WhatsApp process: customer taps Send → business checks availability/artwork/delivery → business confirms final amount/timing → share QR only when ready → verify actual receipt before printing. An edited draft amount or payment screenshot is not proof of payment. Update actual stock manually after accepting business orders.
+10. Reconcile any **historical** reservations separately. Expiration/cancellation utilities remain for those old records; they are not a timer, hold or requirement for new enquiries.
+11. Deploy behind HTTPS and a trusted proxy. Use exact configured origins, platform-level request limits, private admin credentials and backups. The built-in per-process limiter is not a distributed abuse-prevention service. Review the build-tool advisories documented in `CODE_AUDIT.md`.
+12. Repeat the public request, custom brief and Studio/login tests on the deployment origin at least at 360px and 390px, plus desktop. Test an actual phone/Safari as well; Chromium emulation alone does not cover every device or extension.
+
+A successful build or test suite is not a deployment and does not configure Instagram ads, WhatsApp Business app labels/away messages, real photography, inventory split or commercial terms.
